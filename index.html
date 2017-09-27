@@ -264,6 +264,110 @@
 
     <hr />
 
+    <h1>Problem 7: Rattle Battle</h1>
+    <div class="well">
+      <b>Baby Henry is missing his rattle. To get to it, he must
+      cross the floor from his current position to the position
+      of the rattle, avoiding obstacles as he goes.  Henry
+      is impatient, he would like to find the fastest way to get
+      to the rattle.  Since he is only learning to crawl, Henry
+      can crawl one foot Left, Right, Up, or Down in one unit time.
+      Your job is to help Henry by printing out an optimal path
+      for him. If there is more than one optimal path, print any
+      one of them.</b>
+
+      <h2>Specifications</h2>
+      Input:
+      <div class="well">
+        Input will consist of a number n followed by n strings
+        of size n.  "X" characters in the strings represent
+        obstacles where Henry cannot go. "H" represents his
+        current position, and "R" represent the position of 
+        the rattle.  "." characters are open floor where Henry
+        may crawl.
+      </div>
+      Output:
+      <div class="well">
+        For a given input, print a sequence of LRUD letters
+        corresponding to an optimal route for Henry.
+      </div>
+
+      <h2>Test Cases</h2>
+      Input (read from stdin or from a file, your choice):
+      <div class="well">
+        5
+        <br />
+        ...H.
+        <br />
+        .X.X.
+        <br />
+        XX..X
+        <br />
+        R...X
+      </div>
+      Output: LDDDLL
+    </div>
+
+    <hr />
+
+    <h1>BB-8's Dilemna</h1>
+    <div class="well">
+      The droid BB-8 got stuck in a cavern. You need to help BB-8 get out. You know that the cavern is flat and consists of N "rooms". You also know that there are H*W number of rooms, where H is the height of the cavern and W is the width of the cavern. Assume that each "room" takes up one space.
+      <br />
+      <br />
+      Assume that BB-8 starts at the bottom left of the cavern and needs to get to the top right where the exit is. BB-8 can only move to the right or up (that is, cannot move left or down). Going into each room has a cost associated with it. The goal is to to get BB-8 out of the cavern while minimizing the cost.
+      <br />
+      <br />
+      <b>Given a cavern layout with cost, print the path of BB-8 as well as the minimum cost.</b>
+
+      <h2>Specifications</h2>
+      H = Height of Cavern, W = Width of Cavern
+      <br />
+      U = Up, R = Right
+      <hr />
+      Input: H, W
+      <br />
+      Input: Cavern Layout with cost, this can be either read in from stdin or from a file. See below for example.
+      <br />
+      Output: The optimal path, represented with Us and Rs
+
+      <h2>Example Run</h2>
+      H: <kbd>4</kbd>
+      <br />
+      W: <kbd>3</kbd>
+      <br />
+      Cavern Layout With Cost:
+      <div class="well">
+        1 2 3
+        <br />
+        4 5 6
+        <br />
+        7 8 9
+        <br />
+        1 2 3
+      </div>
+
+      The shortest path is highlighted (it isn't necessary to show this part in your program, it's just here as a helpful reference):
+      <div class="well">
+        <b>1</b> <b>2</b> <b>3</b>
+        <br />
+        <b>4</b> 5 6
+        <br />
+        <b>7</b> 8 9
+        <br />
+        <b>1</b> 2 3
+      </div>
+
+      Output:
+      <div class="well">
+        Cost = 18
+        <br />
+        Path = UUURR
+      </div>
+      
+    </div>
+
+    <hr />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
