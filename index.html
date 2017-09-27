@@ -25,18 +25,30 @@
       </div>
     </div>
 
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h1>Rules</h1>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <li>All of OSU's academic integrity rules apply. You are free to use google/your friends so long as your code is your own.</li>
+          <li>All input will be read from stdin (so, for java this means a Scanner reading System.in)</li>
+          <li>You must be standing in line to pass your code off before 8:31 P.M. in order to get credit for the problem.</li>
+          <li>If any problem seems ambigous, ask a judge to clarify.</li>
+        </ul>
+      </div>
+    </div>
+
     <hr>
 
     <h1>Problems</h1>
 
     <hr>
 
-    <div class="container">
+    <div class="well">
       <div class="row">
-        <div class="col-md-6">
-          <h2>Problem 1 (3 points)</h2>
+          <h1>Problem 1 (3 points)</h1>
           <div class="well"><p>Given an input read from stdin, print it backwards and diagonally.</p></div>
-        </div>
         <div class="col-md-6">
           <h2>Specifications</h2>
           Input: A string
@@ -66,17 +78,15 @@
 
     <hr>
 
-    <div class="container">
+    <div class="well">
       <div class="row">
-        <div class="col-md-6">
-          <h2>Problem 2: Caesar Cipher (3 points)</h2>
-          <div class="well">
-           The caesar cipher is a (very outdated...) method of encryption that uses a key, also known as a shift, to encrypt messages.
-                    <br />
-                    To encrypt any letter of the alphabet, you simply add the shift to it. For example, with a shift of <code>3</code>, <code>a</code> becomes <code>a + 3</code> which is <code>d</code>, <code>b</code> becomes <code>e</code>, etc. <a href="https://github.com/OKStateACM/CryptoWorkshop/blob/master/Notes_draft.md">Some more info on the notes from our cryptography workshop</a>
-                    <br />
-                    Brutus wants to figure out what key Caesar most commonly uses. He somehow has access to several messages and their encrypted counterparts. Write a program to help Brutus figure out what key was used to encrypt a certain message.
-          </div>
+        <h1>Problem 2: Caesar Cipher (3 points)</h1>
+        <div class="well">
+         The caesar cipher is a (very outdated...) method of encryption that uses a key, also known as a shift, to encrypt messages.
+                  <br />
+                  To encrypt any letter of the alphabet, you simply add the shift to it. For example, with a shift of <code>3</code>, <code>a</code> becomes <code>a + 3</code> which is <code>d</code>, <code>b</code> becomes <code>e</code>, etc. <a href="https://github.com/OKStateACM/CryptoWorkshop/blob/master/Notes_draft.md">Some more info on the notes from our cryptography workshop</a>
+                  <br />
+                  Brutus wants to figure out what key Caesar most commonly uses. He somehow has access to several messages and their encrypted counterparts. Write a program to help Brutus figure out what key was used to encrypt a certain message.
         </div>
         <div class="col-md-6">
           <h2>Specifications</h2>
@@ -106,13 +116,11 @@
     </div>
 
     <hr>
-    <div class="container">
+    <div class="well">
       <div class="row">
-        <div class="col-md-6">
-          <h2>Problem 3: The rorrim mirror (3 points)</h2>
-          <div class="well">
-            Given an integer n, and a list of n words, print out n lines. Each line should have one of the words from the list, first printed backwards, then printed forwards, with one space inbetween. On any given line, there must be enough leading spaces so that the first character of the words line up on the printout.
-          </div>
+        <h1>Problem 3: The rorrim mirror (3 points)</h1>
+        <div class="well">
+          Given an integer n, and a list of n words, print out n lines. Each line should have one of the words from the list, first printed backwards, then printed forwards, with one space inbetween. On any given line, there must be enough leading spaces so that the first character of the words line up on the printout.
         </div>
         <div class="col-md-6">
           <h2>Specifications</h2>
@@ -135,17 +143,15 @@
     </div>
 
     <hr>
-    <div class="container">
+    <div class="well">
       <div class="row">
-        <div class="col-md-6">
-          <h2>Problem 4: So many integer sequences... (3 points)</h2>
-          <div class="well">
-            The fibonacci sequence <code>F(n)</code> is defined as follows:
-            <div class="well">F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1 <a href="http://oeis.org/A000045">(more info)</a></div>
-            Recamán's sequence is defined as follows:
-            <div class="well">a(0) = 0; for n &gt; 0, a(n) = a(n-1) - n if a(n-1)-n is positive and not already in the sequence, otherwise a(n) = a(n-1) + n. <a href="http://oeis.org/A005132">(more info)</a></div>
-            Write a program that, when given a number <code>n</code>, determines if <code>n</code> is in the the first 45 elements of the fibonacci sequence. If <code>n</code> is not in the first 45 elements of the fibonacci sequence, tell the user so and stop the program. Otherwise, figure out which index of the fibonacci sequence <code>n</code> is, and determine the value of Recamán's sequence for that index.
-          </div>
+        <h1>Problem 4: So many integer sequences... (3 points)</h1>
+        <div class="well">
+          The fibonacci sequence <code>F(n)</code> is defined as follows:
+          <div class="well">F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1 <a href="http://oeis.org/A000045">(more info)</a></div>
+          Recamán's sequence is defined as follows:
+          <div class="well">a(0) = 0; for n &gt; 0, a(n) = a(n-1) - n if a(n-1)-n is positive and not already in the sequence, otherwise a(n) = a(n-1) + n. <a href="http://oeis.org/A005132">(more info)</a></div>
+          Write a program that, when given a number <code>n</code>, determines if <code>n</code> is in the the first 45 elements of the fibonacci sequence. If <code>n</code> is not in the first 45 elements of the fibonacci sequence, tell the user so and stop the program. Otherwise, figure out which index of the fibonacci sequence <code>n</code> is, and determine the value of Recamán's sequence for that index.
         </div>
         <div class="col-md-6">
           <h2>Specifications</h2>
@@ -167,87 +173,47 @@
       </div>
     </div>
 
-    <hr>
-    <div class="container">
-      <div class="row">
-        <h2>Problem 1 (3 points)</h2>
-        <div class="col-md-6">
-          Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
-        <div class="col-md-6">
-          Example run: Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
+    <h1>Problem 5: 2D Palindromes</h1>
+    <div class="well">
+      A 2 dimensional array is a rectangular array of elements. The reverse image of a 2 dimensional array is defined to be the array reversed in both directions.
+      For example, the reverse image of
+      <div class="well">
+        1 4 7
+        <br />
+        2 5 8
+        <br />
+        3 6 9
       </div>
+      is:
+      <div class="well">
+        9 6 3
+        <br />
+        8 5 2
+        <br />
+        7 4 1
+      </div>
+      A 2 dimensional array is said to be palindromic if there is no difference between it and it's reverse image.
+      <b>Write a program that reads in a 2 dimensional array from a file, and checks to see if it is palindromic</b>
+
+      <h2>Specifications</h2>
+      Input: File name of a file containing a 2 dimensional array, with elements seperated by spaces, rows seperated by lines.
+      <br />
+      Output: A message stating whether or not that 2 dimensional array is palindromic.
+
+      <h2>Example Run</h2>
+      File Name to Read: <kbd>2darray.txt</kbd>
+      <br />
+      (where 2d array.txt looks like this):
+      <div class="well">
+        1 2 3
+        <br />
+        2 1 2
+        <br />
+        3 2 1
+      </div>
+      Output: This 2 dimensional array is palindromic.
     </div>
 
-    <hr>
-    <div class="container">
-      <div class="row">
-        <h2>Problem 1 (3 points)</h2>
-        <div class="col-md-6">
-          Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
-        <div class="col-md-6">
-          Example run: Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
-      </div>
-    </div>
-
-    <hr>
-    <div class="container">
-      <div class="row">
-        <h2>Problem 1 (3 points)</h2>
-        <div class="col-md-6">
-          Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
-        <div class="col-md-6">
-          Example run: Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
-      </div>
-    </div>
-
-    <hr>
-    <div class="container">
-      <div class="row">
-        <h2>Problem 1 (3 points)</h2>
-        <div class="col-md-6">
-          Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
-        <div class="col-md-6">
-          Example run: Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
-      </div>
-    </div>
-
-    <hr>
-    <div class="container">
-      <div class="row">
-        <h2>Problem 1 (3 points)</h2>
-        <div class="col-md-6">
-          Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
-        <div class="col-md-6">
-          Example run: Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
-      </div>
-    </div>
-
-    <hr>
-    <div class="container">
-      <div class="row">
-        <h2>Problem 1 (3 points)</h2>
-        <div class="col-md-6">
-          Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
-        <div class="col-md-6">
-          Example run: Consectetur dolor repudiandae sit aut voluptate Architecto quibusdam saepe sunt cupiditate magnam? Molestias cum voluptas labore eaque corrupti minus libero, placeat possimus recusandae eius aut ullam. Beatae impedit aut cumque.
-        </div>
-      </div>
-    </div>
-
-    <hr>
-
-  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
