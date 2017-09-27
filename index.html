@@ -19,7 +19,7 @@
         <h1>Instructions</h1>
       </div>
       <div class="panel-body">
-        Use Java or C++ to implement a solution to the problems listed below.
+        Use Java, C, C++, or Python3 to implement a solution to the problems listed below.
         When you are done, come pass it off the one of the judges.
         You have from now until 8:30 P.M. Most points win. Good luck.
       </div>
@@ -32,9 +32,10 @@
       <div class="panel-body">
         <ul>
           <li>All of OSU's academic integrity rules apply. You are free to use google/your friends so long as your code is your own.</li>
-          <li>All input will be read from stdin (so, for java this means a Scanner reading System.in)</li>
+          <li>Unless the problem specifies otherwise, all input will be read from stdin (so, for java this means a Scanner reading System.in)</li>
           <li>You must be standing in line to pass your code off before 8:31 P.M. in order to get credit for the problem.</li>
-          <li>If any problem seems ambigous, ask a judge to clarify.</li>
+          <li>If you come to one of the judges to pass off a program and it doesn't work, you may fix it and come back as many times as necessary, given it is still before 8:31 P.M.</li>
+          <li>If any problem seems too ambigous, ask a judge to clarify.</li>
         </ul>
       </div>
     </div>
@@ -147,30 +148,38 @@
       <div class="row">
         <h1>Problem 4: So many integer sequences... (3 points)</h1>
         <div class="well">
-          The fibonacci sequence <code>F(n)</code> is defined as follows:
-          <div class="well">F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1 <a href="http://oeis.org/A000045">(more info)</a></div>
-          Recamán's sequence is defined as follows:
-          <div class="well">a(0) = 0; for n &gt; 0, a(n) = a(n-1) - n if a(n-1)-n is positive and not already in the sequence, otherwise a(n) = a(n-1) + n. <a href="http://oeis.org/A005132">(more info)</a></div>
-          Write a program that, when given a number <code>x</code>, determines if <code>x</code> is in the the first 45 elements of the fibonacci sequence. If <code>x</code> is in the first 45 elements of the fibonacci sequence, let <code>n</code> be equal to the index in the fibonacci sequence of the first occurence of <code>x</code>. i.e. with <code>x = 2</code> , 2 is the 3rd element of the fibonacci sequence, so <code>n = 3</code>. Now that you have <code>n</code> determine what <code>Recamán(n)</code> is. If <code>x</code> is <b>not</b> in the fibonacci sequence, inform the user and quit the program.
+          The fibonacci sequence is defined as follows:
+          <div class="well">
+            fib(n) = fib(n-1) + fib(n-2),
+            <br />
+            with fib(0) = 0 and fib(1) = 1 <a href="http://oeis.org/A000045">(more info)</a>
+          </div>
+          Recamán's sequence, is defined as follows:
+          <div class="well">
+            rec(0) = 0;
+            <br />
+            for n &gt; 0, rec(n) = rec(n-1)-n if rec(n-1)-n is positive and not already in the sequence,
+            <br />
+            otherwise rec(n) = rec(n-1)+n. <a href="http://oeis.org/A005132">(more info)</a>
+          </div>
+          <b>Write a program that, when given a number <code>x</code>, determines if <code>x</code> is in the the first 45 elements of the fibonacci sequence. If <code>x</code> is in the first 45 elements of the fibonacci sequence, let <code>n</code> be equal to the index in the fibonacci sequence of the first occurence of <code>x</code>. i.e. <code>fib(n) = x</code>. Now that you have <code>n</code> determine what <code>rec(n)</code> is. If <code>x</code> is not in the fibonacci sequence, inform the user and quit the program.</b>
         </div>
-        <div class="col-md-6">
-          <h2>Specifications</h2>
-          <p>n &lt;= 701408733</p>
-          <hr />
-          <p>You only have to check if n is one of the first 45 elements of the fibonacci sequence, that is <code>fib(0)</code> through <code>fib(44)</code>.</p>
-          <h2>Example Runs</h2>
-          Input: <kbd>4181</kbd>
-          <br />
-          Output: 62
-          <hr />
-          Input: <kbd>701408733</kbd>
-          <br />
-          Output: 36
-          <hr />
-          Input: <kbd>9</kbd>
-          <br />
-          Output: 9 is not in the first 45 elements of the fibonacci sequence
-        </div>
+        <h2>Specifications</h2>
+        <p>n &lt;= 701408733</p>
+        <hr />
+        <p>You only have to check if n is one of the first 45 elements of the fibonacci sequence, that is <code>fib(0)</code> up to and incuding <code>fib(44)</code>.</p>
+        <h2>Example Runs</h2>
+        Input: <kbd>4181</kbd> (This is the same as <code>fib(19)</code>)
+        <br />
+        Output: 62 (This is the same as <code>rec(19)</code>)
+        <hr />
+        Input: <kbd>701408733</kbd>
+        <br />
+        Output: 36
+        <hr />
+        Input: <kbd>9</kbd>
+        <br />
+        Output: 9 is not in the first 45 elements of the fibonacci sequence
       </div>
     </div>
 
@@ -194,10 +203,12 @@
         7 4 1
       </div>
       A 2 dimensional array is said to be palindromic if there is no difference between it and it's reverse image.
-      <b>Write a program that reads in a 2 dimensional array from a file, and checks to see if it is palindromic</b>
+      <b>Write a program that reads in a 2 dimensional array from a file whose filename is specified by either stdin or a command line argument, and checks to see if that 2 dimensional array is palindromic</b>
 
       <h2>Specifications</h2>
-      Input: File name of a file containing a 2 dimensional array, with elements seperated by spaces, rows seperated by lines.
+      Input: File name of a file containing a 2 dimensional array (either parsed as a command line argument or read from stdin)
+      <br />
+      File: The file should contain a 2 dimensional array of elements, where each row is a line, and each element in each row is seperated by a space.
       <br />
       Output: A message stating whether or not that 2 dimensional array is palindromic.
 
