@@ -204,7 +204,7 @@
       <h2>Example Run</h2>
       File Name to Read: <kbd>2darray.txt</kbd>
       <br />
-      (where 2d array.txt looks like this):
+      (where 2darray.txt looks like this):
       <div class="well">
         1 2 3
         <br />
@@ -213,6 +213,56 @@
         3 2 1
       </div>
       Output: This 2 dimensional array is palindromic.
+      <hr />
+      File Name to Read: <kbd>2darray.txt</kbd>
+      <br />
+      (where 2darray.txt looks like this):
+      <div class="well">
+        1 3 4
+        <br />
+        3 6 8
+        <br />
+        3 4 2
+      </div>
+      Output: This 2 dimensional array is not palindromic.
+    </div>
+
+    <h1>Problem 6: Collatz</h1>
+    <div class="well">
+      The Collatz sequence is defined as:
+      <div class="well">
+        Start with any positive integer <code>n</code>.
+        <br />
+        if (3n + 1) is odd:
+        <br />
+        &nbsp;&nbsp;The next term in the sequence will be (3n + 1)
+        <br />
+        if (3n + 1) is even:
+        <br />
+         &nbsp;&nbsp;The next term in the sequence will be n/2
+        <br />
+        We do this until we reach one.
+      </div>
+      For example, the Collatz sequence of 3 is:
+      <div class="well">
+        3 -&gt; 10 -&gt; 5 -&gt; 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1
+      </div>
+      The length of the above Collatz sequence is 8
+
+      <br />
+      <b>Write a program that, when given a length, finds the smallest positive integer whose Collatz sequence is of that length</b>
+
+      <h2>Specifications</h2>
+      Input: an integer n, representing a length.
+      <br />
+      Output: The smallest positive integer whose Collatz sequence is of that length.
+
+      <h2>Example Run</h2>
+      Length: <kbd>3</kbd>
+      <br />
+      Smallest Positive Integer with Length 3: 4 
+      <br />
+      (because the collatz sequence of 4 is 4 -&gt; 2 -&gt; 1, which is of length 3)
     </div>
 
 
