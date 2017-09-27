@@ -131,44 +131,7 @@
 
     <hr>
 
-    <h1>Problem 4: So many integer sequences... (3 points)</h1>
-    <div class="well">
-      The fibonacci sequence is defined as follows:
-      <div class="well">
-        fib(n) = fib(n-1) + fib(n-2),
-        <br />
-        with fib(0) = 0 and fib(1) = 1 <a href="http://oeis.org/A000045">(more info)</a>
-      </div>
-      Recamán's sequence, is defined as follows:
-      <div class="well">
-        rec(0) = 0;
-        <br />
-        for n &gt; 0, rec(n) = rec(n-1)-n if rec(n-1)-n is positive and not already in the sequence,
-        <br />
-        otherwise rec(n) = rec(n-1)+n. <a href="http://oeis.org/A005132">(more info)</a>
-      </div>
-      <b>Write a program that, when given a number <code>x</code>, determines if <code>x</code> is in the the first 45 elements of the fibonacci sequence. If <code>x</code> is in the first 45 elements of the fibonacci sequence, let <code>n</code> be equal to the index in the fibonacci sequence of the first occurence of <code>x</code>. i.e. <code>fib(n) = x</code>. Now that you have <code>n</code> determine what <code>rec(n)</code> is. If <code>x</code> is not in the fibonacci sequence, inform the user and quit the program.</b>
-      <h2>Specifications</h2>
-      <p>n &lt;= 701408733</p>
-      <hr />
-      <p>You only have to check if n is one of the first 45 elements of the fibonacci sequence, that is <code>fib(0)</code> up to and incuding <code>fib(44)</code>.</p>
-      <h2>Example Runs</h2>
-      Input: <kbd>4181</kbd> (This is the same as <code>fib(19)</code>)
-      <br />
-      Output: 62 (This is the same as <code>rec(19)</code>)
-      <hr />
-      Input: <kbd>701408733</kbd>
-      <br />
-      Output: 36
-      <hr />
-      Input: <kbd>9</kbd>
-      <br />
-      Output: 9 is not in the first 45 elements of the fibonacci sequence
-    </div>
-
-    <hr />
-
-    <h1>Problem 5: 2D Palindromes</h1>
+    <h1>Problem 4: 2D Palindromes</h1>
     <div class="well">
       A 2 dimensional array is a rectangular array of elements. The reverse image of a 2 dimensional array is defined to be the array reversed in both directions.
       For example, the reverse image of
@@ -225,6 +188,43 @@
     
     <hr />
 
+
+    <h1>Problem 5: So many integer sequences... (3 points)</h1>
+    <div class="well">
+      The fibonacci sequence is defined as follows:
+      <div class="well">
+        fib(n) = fib(n-1) + fib(n-2),
+        <br />
+        with fib(0) = 0 and fib(1) = 1 <a href="http://oeis.org/A000045">(more info)</a>
+      </div>
+      Recamán's sequence, is defined as follows:
+      <div class="well">
+        rec(0) = 0;
+        <br />
+        for n &gt; 0, rec(n) = rec(n-1)-n if rec(n-1)-n is positive and not already in the sequence,
+        <br />
+        otherwise rec(n) = rec(n-1)+n. <a href="http://oeis.org/A005132">(more info)</a>
+      </div>
+      <b>Write a program that, when given a number <code>x</code>, determines if <code>x</code> is in the the first 45 elements of the fibonacci sequence. If <code>x</code> is in the first 45 elements of the fibonacci sequence, let <code>n</code> be equal to the index in the fibonacci sequence of the first occurence of <code>x</code>. i.e. <code>fib(n) = x</code>. Now that you have <code>n</code> determine what <code>rec(n)</code> is. If <code>x</code> is not in the fibonacci sequence, inform the user and quit the program.</b>
+      <h2>Specifications</h2>
+      <p>n &lt;= 701408733</p>
+      <hr />
+      <p>You only have to check if n is one of the first 45 elements of the fibonacci sequence, that is <code>fib(0)</code> up to and incuding <code>fib(44)</code>.</p>
+      <h2>Example Runs</h2>
+      Input: <kbd>4181</kbd> (This is the same as <code>fib(19)</code>)
+      <br />
+      Output: 62 (This is the same as <code>rec(19)</code>)
+      <hr />
+      Input: <kbd>701408733</kbd>
+      <br />
+      Output: 36
+      <hr />
+      Input: <kbd>9</kbd>
+      <br />
+      Output: 9 is not in the first 45 elements of the fibonacci sequence
+    </div>
+
+    <hr />
     <h1>Problem 6: Collatz</h1>
     <div class="well">
       The Collatz sequence is defined as:
