@@ -46,142 +46,126 @@
 
     <hr>
 
+    <h1>Problem 1 (3 points)</h1>
     <div class="well">
-      <div class="row">
-          <h1>Problem 1 (3 points)</h1>
-          <div class="well"><p>Given an input read from stdin, print it backwards and diagonally.</p></div>
-        <div class="col-md-6">
-          <h2>Specifications</h2>
-          Input: A string
-          <br />
-          Output: The string printed diagonally and in reverse
+      <b>Given an input read from stdin, print it backwards and diagonally.</b>
+      <h2>Specifications</h2>
+      Input: A string
+      <br />
+      Output: The string printed diagonally and in reverse
 
-          <h2>Example Run</h2>
-          Input: <kbd>Pistol Pete</kbd>
-          <br>
-          Output:
-          <div class="well">
-            <p>e</p>
-            <p>&nbsp;t</p>
-            <p>&nbsp;&nbsp;e</p>
-            <p>&nbsp;&nbsp;&nbsp;P</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp; </p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P</p>
-          </div>
-        </div>
+      <h2>Example Run</h2>
+      Input: <kbd>Pistol Pete</kbd>
+      <br>
+      Output:
+      <div class="well">
+        <p>e</p>
+        <p>&nbsp;t</p>
+        <p>&nbsp;&nbsp;e</p>
+        <p>&nbsp;&nbsp;&nbsp;P</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P</p>
       </div>
     </div>
 
     <hr>
 
+    <h1>Problem 2: Caesar Cipher (3 points)</h1>
     <div class="well">
-      <div class="row">
-        <h1>Problem 2: Caesar Cipher (3 points)</h1>
-        <div class="well">
-         The caesar cipher is a (very outdated...) method of encryption that uses a key, also known as a shift, to encrypt messages.
-                  <br />
-                  To encrypt any letter of the alphabet, you simply add the shift to it. For example, with a shift of <code>3</code>, <code>a</code> becomes <code>a + 3</code> which is <code>d</code>, <code>b</code> becomes <code>e</code>, etc. <a href="https://github.com/OKStateACM/CryptoWorkshop/blob/master/Notes_draft.md">Some more info on the notes from our cryptography workshop</a>
-                  <br />
-                  Brutus wants to figure out what key Caesar most commonly uses. He somehow has access to several messages and their encrypted counterparts. Write a program to help Brutus figure out what key was used to encrypt a certain message.
-        </div>
-        <div class="col-md-6">
-          <h2>Specifications</h2>
-          Input1: a plaintext String
-          <br />
-          Input2: another string that is the encrypted form of Input1
-          <br />
-          Output: The key used to encrypt Input1 into Input2
-          <hr />
-          Assume that only letters a-z will be in the input. No need to worry about punctuation or capital letters.
-          <hr />
-          The encryption scheme wraps around, i.e. <code>z + 3 = c</code>, <code>c + 25 = b</code>, <code>z + 20 = t</code>
-          <hr />
-          You can assume that Input2 will always be the correct encrypted form of Input1.
-          <hr />
-          <b>Note: </b> The ascii range for a-z starts with a at 97. If you want to work with a-z as 1-26 subtract 96 from the char.
-          <br />
+      The caesar cipher is a (very outdated...) method of encryption that uses a key, also known as a shift, to encrypt messages.
+              <br />
+              To encrypt any letter of the alphabet, you simply add the shift to it. For example, with a shift of <code>3</code>, <code>a</code> becomes <code>a + 3</code> which is <code>d</code>, <code>b</code> becomes <code>e</code>, etc. <a href="https://github.com/OKStateACM/CryptoWorkshop/blob/master/Notes_draft.md">Some more info on the notes from our cryptography workshop</a>
+              <br />
+              Brutus wants to figure out what key Caesar most commonly uses. He somehow has access to several messages and their encrypted counterparts. <b>Write a program to help Brutus figure out what key was used to encrypt a certain message.</b>
+      <h2>Specifications</h2>
+      Input1: a plaintext String
+      <br />
+      Input2: another string that is the encrypted form of Input1
+      <br />
+      Output: The key used to encrypt Input1 into Input2
+      <hr />
+      Assume that only letters a-z will be in the input. No need to worry about punctuation or capital letters.
+      <hr />
+      The encryption scheme wraps around, i.e. <code>z + 3 = c</code>, <code>c + 25 = b</code>, <code>z + 20 = t</code>
+      <hr />
+      You can assume that Input2 will always be the correct encrypted form of Input1.
+      <hr />
+      <b>Note: </b> The ascii range for a-z starts with a at 97. If you want to work with a-z as 1-26 subtract 96 from the char.
+      <br />
 
-          <h2>Example Run</h2>
-          Plain text: <kbd>gopokes</kbd>
-          <br />
-          Encrypted text: <kbd>ltutpjx</kbd>
-          <br />
-          Key Used: 5
-        </div>
+      <h2>Example Run</h2>
+      Plain text: <kbd>gopokes</kbd>
+      <br />
+      Encrypted text: <kbd>ltutpjx</kbd>
+      <br />
+      Key Used: 5
+    </div>
+
+    <hr>
+
+    <h1>Problem 3: The rorrim mirror (3 points)</h1>
+    <div class="well">
+      <b>Given an integer n, and a list of n words, print out n lines. Each line should have one of the words from the list, first printed backwards, then printed forwards, with one space inbetween. On any given line, there must be enough leading spaces so that the first character of the words line up on the printout.</b>
+      <h2>Specifications</h2>
+      Input: Integer n, followed by n words
+      <br />
+      Output: Exactly as specified in problem
+      <br />
+      <h2>Example Run</h2>
+      Input: <kbd>4 Sun Moon Stellar Balloon</kbd>
+      <br />
+      Output:
+      <div class="well">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;nuS Sun</p>
+        <p>&nbsp;&nbsp;&nbsp;nooM Moon</p>
+        <p>ralletS Stellar</p>
+        <p>noollaB Balloon</p>
       </div>
     </div>
 
     <hr>
+
+    <h1>Problem 4: So many integer sequences... (3 points)</h1>
     <div class="well">
-      <div class="row">
-        <h1>Problem 3: The rorrim mirror (3 points)</h1>
-        <div class="well">
-          Given an integer n, and a list of n words, print out n lines. Each line should have one of the words from the list, first printed backwards, then printed forwards, with one space inbetween. On any given line, there must be enough leading spaces so that the first character of the words line up on the printout.
-        </div>
-        <div class="col-md-6">
-          <h2>Specifications</h2>
-          Input: Integer n, followed by n words
-          <br />
-          Output: Exactly as specified in problem
-          <br />
-          <h2>Example Run</h2>
-          Input: <kbd>4 Sun Moon Stellar Balloon</kbd>
-          <br />
-          Output:
-          <div class="well">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;nuS Sun</p>
-            <p>&nbsp;&nbsp;&nbsp;nooM Moon</p>
-            <p>ralletS Stellar</p>
-            <p>noollaB Balloon</p>
-          </div>
-        </div>
+      The fibonacci sequence is defined as follows:
+      <div class="well">
+        fib(n) = fib(n-1) + fib(n-2),
+        <br />
+        with fib(0) = 0 and fib(1) = 1 <a href="http://oeis.org/A000045">(more info)</a>
       </div>
+      Recamán's sequence, is defined as follows:
+      <div class="well">
+        rec(0) = 0;
+        <br />
+        for n &gt; 0, rec(n) = rec(n-1)-n if rec(n-1)-n is positive and not already in the sequence,
+        <br />
+        otherwise rec(n) = rec(n-1)+n. <a href="http://oeis.org/A005132">(more info)</a>
+      </div>
+      <b>Write a program that, when given a number <code>x</code>, determines if <code>x</code> is in the the first 45 elements of the fibonacci sequence. If <code>x</code> is in the first 45 elements of the fibonacci sequence, let <code>n</code> be equal to the index in the fibonacci sequence of the first occurence of <code>x</code>. i.e. <code>fib(n) = x</code>. Now that you have <code>n</code> determine what <code>rec(n)</code> is. If <code>x</code> is not in the fibonacci sequence, inform the user and quit the program.</b>
+      <h2>Specifications</h2>
+      <p>n &lt;= 701408733</p>
+      <hr />
+      <p>You only have to check if n is one of the first 45 elements of the fibonacci sequence, that is <code>fib(0)</code> up to and incuding <code>fib(44)</code>.</p>
+      <h2>Example Runs</h2>
+      Input: <kbd>4181</kbd> (This is the same as <code>fib(19)</code>)
+      <br />
+      Output: 62 (This is the same as <code>rec(19)</code>)
+      <hr />
+      Input: <kbd>701408733</kbd>
+      <br />
+      Output: 36
+      <hr />
+      Input: <kbd>9</kbd>
+      <br />
+      Output: 9 is not in the first 45 elements of the fibonacci sequence
     </div>
 
-    <hr>
-    <div class="well">
-      <div class="row">
-        <h1>Problem 4: So many integer sequences... (3 points)</h1>
-        <div class="well">
-          The fibonacci sequence is defined as follows:
-          <div class="well">
-            fib(n) = fib(n-1) + fib(n-2),
-            <br />
-            with fib(0) = 0 and fib(1) = 1 <a href="http://oeis.org/A000045">(more info)</a>
-          </div>
-          Recamán's sequence, is defined as follows:
-          <div class="well">
-            rec(0) = 0;
-            <br />
-            for n &gt; 0, rec(n) = rec(n-1)-n if rec(n-1)-n is positive and not already in the sequence,
-            <br />
-            otherwise rec(n) = rec(n-1)+n. <a href="http://oeis.org/A005132">(more info)</a>
-          </div>
-          <b>Write a program that, when given a number <code>x</code>, determines if <code>x</code> is in the the first 45 elements of the fibonacci sequence. If <code>x</code> is in the first 45 elements of the fibonacci sequence, let <code>n</code> be equal to the index in the fibonacci sequence of the first occurence of <code>x</code>. i.e. <code>fib(n) = x</code>. Now that you have <code>n</code> determine what <code>rec(n)</code> is. If <code>x</code> is not in the fibonacci sequence, inform the user and quit the program.</b>
-        </div>
-        <h2>Specifications</h2>
-        <p>n &lt;= 701408733</p>
-        <hr />
-        <p>You only have to check if n is one of the first 45 elements of the fibonacci sequence, that is <code>fib(0)</code> up to and incuding <code>fib(44)</code>.</p>
-        <h2>Example Runs</h2>
-        Input: <kbd>4181</kbd> (This is the same as <code>fib(19)</code>)
-        <br />
-        Output: 62 (This is the same as <code>rec(19)</code>)
-        <hr />
-        Input: <kbd>701408733</kbd>
-        <br />
-        Output: 36
-        <hr />
-        Input: <kbd>9</kbd>
-        <br />
-        Output: 9 is not in the first 45 elements of the fibonacci sequence
-      </div>
-    </div>
+    <hr />
 
     <h1>Problem 5: 2D Palindromes</h1>
     <div class="well">
@@ -237,6 +221,8 @@
       </div>
       Output: This 2 dimensional array is not palindromic.
     </div>
+    
+    <hr />
 
     <h1>Problem 6: Collatz</h1>
     <div class="well">
@@ -275,6 +261,8 @@
       <br />
       (because the collatz sequence of 4 is 4 -&gt; 2 -&gt; 1, which is of length 3)
     </div>
+
+    <hr />
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
