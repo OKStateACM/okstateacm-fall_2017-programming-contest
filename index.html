@@ -463,14 +463,18 @@
           <td><code>J</code></td>
           <td><b>One time jump: </b>Pop a value off the stack which becomes x. Pop another value off the stack which becomes y. Move to cell (x,y) and proceed execution. If you return to the cell in which the J instruction was originally executed, do not execute it again.</td>
         </tr>
+        <tr>
+          <td><code>Q</code></td>
+          <td>Stop Execution</td>
+        </tr>
       </table>
 
       Each one of these operations would exist inside a cell on the grid system. An example code snippet
       would be:
       <div class="well">
-        "a"PD
+        "a"_PD
         <br />
-        J00_L
+        QJ00_L
       </div>
       It's a good idea to visualize this as a grid:
       <table class="table table-bordered">
@@ -478,10 +482,12 @@
           <td>"</td>
           <td>a</td>
           <td>"</td>
+          <td>_</td>
           <td>P</td>
           <td>D</td>
         </tr
         <tr>
+          <td>Q</td>
           <td>J</td>
           <td>0</td>
           <td>0</td>
@@ -494,6 +500,7 @@
         to enter string mode. Execution moves to the right.</li>
         <li>The next cell contains an 'a'. Since it is in string mode, the 'a' is pushed onto the stack.</li>
         <li>The next cell contains <code>"</code>, which terminates string mode.</li>
+        <li>The next cell is a no op, nothing happens and the interpreter moves right one</li>
         <li>The next cell contains an operation, <code>P</code>, which tells the interpreter
         to pop the top value off of the stack and print it to stdout.</li>
         <li>Still moving to the right, the next cell contains an operation <code>D</code>, which
@@ -512,8 +519,8 @@
         In this case, since the last two values pushed to the stack were <code>0</code>
         and <code>0</code>, the interpreter will move to <code>(0, 0)</code>.</li>
         <li>Everything will be run again, this time when it gets to the <code>J</code> operation
-        it will move to the next operation. In this case there is no operation after J, so
-        the program terminates.</li>
+        it will continue moving left to the next operation.</li>
+        <li>The next cell contains an operation <code>Q</code> which tells the interpreter to stop execution.</li>
       </ul>
 
       <b>Write an interpreter for this language. It should read in a file and execute the code specified in the file.</b>
