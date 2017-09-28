@@ -206,7 +206,7 @@
       </div>
       Output: This 2 dimensional array is not palindromic.
     </div>
-    
+
     <hr />
 
 
@@ -281,7 +281,7 @@
       <h2>Example Run</h2>
       Length: <kbd>3</kbd>
       <br />
-      Smallest Positive Integer with Length 3: 4 
+      Smallest Positive Integer with Length 3: 4
       <br />
       (because the collatz sequence of 4 is 4 -&gt; 2 -&gt; 1, which is of length 3)
     </div>
@@ -307,7 +307,7 @@
         Input will consist of a number n followed by n strings
         of size n.  "X" characters in the strings represent
         obstacles where Henry cannot go. "H" represents his
-        current position, and "R" represent the position of 
+        current position, and "R" represent the position of
         the rattle.  "." characters are open floor where Henry
         may crawl.
       </div>
@@ -317,7 +317,24 @@
         corresponding to an optimal route for Henry.
       </div>
 
-      <h2>Example Run</h2>
+      <h2>Example Runs</h2>
+
+      Input (read from stdin or from a file, your choice):
+      <div class="well">
+        4
+        <br />
+        H...
+        <br />
+        .XX.
+        <br />
+        XXXR
+        <br />
+        XXXX
+      </div>
+      Output: RRRDD
+
+      <hr />
+
       Input (read from stdin or from a file, your choice):
       <div class="well">
         5
@@ -333,6 +350,7 @@
         XXXXX
       </div>
       Output: LDDDLL
+
     </div>
 
     <hr />
@@ -392,10 +410,146 @@
         <br />
         Path = UUURR
       </div>
-      
+
     </div>
 
     <hr />
+
+    <!-- TODO Show Grid System Better -->
+
+    <h1>Problem 9: On The Grid (What the Funge?)</h1>
+    <div class="well">
+      <a href="https://esolangs.org/wiki/Befunge">Befunge</a> is an esoteric programming language that
+      uses a grid system. It was designed specifically to be the hardest programming language to write
+      a compiler for. Each instruction is part of a grid. The interpreter starts at the top left <code>(0, 0)</code>,
+      runs the instruction, then moves right(unless told otherwise) and runs the instruction at that cell.
+      A <a href="https://esolangs.org/wiki/Fungeoid">Fungeoid</a> is any language that is in the befunge family.
+      It must use a grid system, like befunge does. We have defined a simple fungeoid of which the
+      permitted operations are listed below.
+      <table class="table table-striped">
+        <tr>
+          <td><code>R</code></td>
+          <td>Start moving right</td>
+        </tr>
+        <tr>
+          <td><code>L</code></td>
+          <td>Start moving left</td>
+        </tr>
+        <tr>
+          <td><code>U</code></td>
+          <td>Start moving up</td>
+        </tr>
+        <tr>
+          <td><code>D</code></td>
+          <td>Start moving down</td>
+        </tr>
+        <tr>
+          <td><code>0</code>-<code>9</code></td>
+          <td>Push this number onto the stack</td>
+        </tr>
+        <tr>
+          <td><code>"</code></td>
+          <td>Start string mode: push each character's ASCII value all the way up until the next "</td>
+        </tr>
+        <tr>
+          <td><code>P</code></td>
+          <td>Pop value from the stack and output as ASCII character</td>
+        </tr>
+        <tr>
+          <td><code>_</code></td>
+          <td><b>no op:</b> proceed to next cell without doing anything</td>
+        </tr>
+        <tr>
+          <td><code>J</code></td>
+          <td><b>One time jump: </b>Pop a value off the stack which becomes x. Pop another value off the stack which becomes y. Move to cell (x,y) and proceed execution. If you return to the cell in which the J instruction was originally executed, do not execute it again.</td>
+        </tr>
+      </table>
+
+      Each one of these operations would exist inside a cell on the grid system. An example code snippet
+      would be:
+      <div class="well">
+        "a"PD
+        <br />
+        J00_L
+      </div>
+      It's a good idea to visualize this as a grid:
+      <table class="table table-bordered">
+        <tr>
+          <td>"</td>
+          <td>a</td>
+          <td>"</td>
+          <td>P</td>
+          <td>D</td>
+        </tr
+        <tr>
+          <td>J</td>
+          <td>0</td>
+          <td>0</td>
+          <td>_</td>
+          <td>L</td>
+        </tr>
+      </table>
+      <ul>
+        <li>Execution starts at <code>(0, 0)</code> with <code>"</code>. This tells the interpreter
+        to enter string mode. Execution moves to the right.</li>
+        <li>The next cell contains an 'a'. Since it is in string mode, the 'a' is pushed onto the stack.</li>
+        <li>The next cell contains <code>"</code>, which terminates string mode.</li>
+        <li>The next cell contains an operation, <code>P</code>, which tells the interpreter
+        to pop the top value off of the stack and print it to stdout.</li>
+        <li>Still moving to the right, the next cell contains an operation <code>D</code>, which
+        tells the interpreter to start moving down the grid cell by cell.</li>
+        <li>The interpreter moves down one cell. The operation in this cell is <code>L</code>,
+        which tells the interpreter to start moving left cell by cell.</li>
+        <li>The interpreter moves to the left one cell. The <code>_</code> in this cell represents
+        a "no op", meaning nothing will happen, and the interpreter will continue moving
+        in the direction it was previously.</li>
+        <li>The interpreter moves left one cell. The <code>0</code> in this cell tells the interpreter
+        to push a <code>0</code> onto the stack.</li>
+        <li>The interpreter moves left one cell and again pushs <code>0</code> to the stack.</li>
+        <li>The interpreter once again moves left one cell. The <code>J</code> operation
+        tells the interpreter to pop a value from the stack, call it <code>x</code>, pop
+        the next value from the stack, call it <code>y</code>, and move to <code>(x, y)</code>.
+        In this case, since the last two values pushed to the stack were <code>0</code>
+        and <code>0</code>, the interpreter will move to <code>(0, 0)</code>.</li>
+        <li>Everything will be run again, this time when it gets to the <code>J</code> operation
+        it will move to the next operation. In this case there is no operation after J, so
+        the program terminates.</li>
+      </ul>
+
+      <b>Write an interpreter for this language. It should read in a file and execute the code specified in the file.</b>
+
+      <h2>Specifications</h2>
+      Input: A file (specified as a command line argument) which contains valid code.
+      <br />
+      Output: Whatever the output of the code specified in the file is.
+
+      <h2>Example Runs</h2>
+      Input File:
+      <div class="well">
+        "dlroW olleH"PPPPPPPPPPP
+      </div>
+      Output:
+      <div class="well">
+        Hello World
+      </div>
+
+      <hr />
+
+      Input File:
+      <div class="well">
+        ________D
+        <br />
+        D"Hello"L
+        <br />
+        RPPPPP18J
+      </div>
+
+      Output:
+      <div class="well">
+        HelloHello
+      </div>
+
+    </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
