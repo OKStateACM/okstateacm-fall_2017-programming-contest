@@ -37,7 +37,7 @@
         <h1>Instructions</h1>
       </div>
       <div class="panel-body">
-        Use Java, C, C++, or Python3 to implement a solution to the problems listed below.
+        Use Java, C, C++, or Python (2 or 3) to implement a solution to the problems listed below.
         When you are done, come pass it off to one of the judges.
         You have from now until 8:30 P.M. Most points win. Good luck.
       </div>
@@ -472,13 +472,14 @@
       Each one of these operations would exist inside a cell on the grid system. An example code snippet
       would be:
       <div class="well">
-        "a"_PD
+        R"a"_PD
         <br />
-        QJ00_L
+        Q_J00_L
       </div>
       It's a good idea to visualize this as a grid:
       <table class="table table-bordered">
         <tr>
+          <td>R</td>
           <td>"</td>
           <td>a</td>
           <td>"</td>
@@ -488,6 +489,7 @@
         </tr
         <tr>
           <td>Q</td>
+          <td>_</td>
           <td>J</td>
           <td>0</td>
           <td>0</td>
@@ -496,8 +498,11 @@
         </tr>
       </table>
       <ul>
-        <li>Execution starts at <code>(0, 0)</code> with <code>"</code>. This tells the interpreter
-        to enter string mode. Execution moves to the right.</li>
+        <li>Execution starts at <code>(0, 0)</code> with <code>R</code>. This tells the interpreter
+        to start moving right. (This isn't actually necessary right now, since execution should move
+        to the right by default, but it's important for later.)</li>
+        <li>Moving to the right, the next cell contains <code>"</code> which tells the interpreter
+        to enter string mode. Execution continues to move to the right.</li>
         <li>The next cell contains an 'a'. Since it is in string mode, the 'a' is pushed onto the stack.</li>
         <li>The next cell contains <code>"</code>, which terminates string mode.</li>
         <li>The next cell is a no op, nothing happens and the interpreter moves right one</li>
@@ -518,9 +523,12 @@
         the next value from the stack, call it <code>y</code>, and move to <code>(x, y)</code>.
         In this case, since the last two values pushed to the stack were <code>0</code>
         and <code>0</code>, the interpreter will move to <code>(0, 0)</code>.</li>
-        <li>Everything will be run again, this time when it gets to the <code>J</code> operation
-        it will continue moving left to the next operation.</li>
-        <li>The next cell contains an operation <code>Q</code> which tells the interpreter to stop execution.</li>
+        <li>It will go back to <code>(0, 0)</code>. The direction the interpreter was moving before the J
+        operation was <b>left</b>, so after moving to <code>(0, 0)</code> and executing that command it should move left one cell.
+        <b>However, </b>the operation in cell <code>(0, 0)</code> is <code>R</code>, which tells the interpreter to start moving <b>right</b> cell by cell</li>
+        <li>Execution will therefore move to the right, and everything will be the same as before. <b>until...</b></li>
+        <li>When the interpreter reaches the J instruction, it should not execute it, and execution should continue moving.</li>
+        <li>Moving left again, the interpreter encounters a <code>_</code>(no op), and then a <code>Q</code>, which stops execution</li>
       </ul>
 
       <b>Write an interpreter for this language. It should read in a file and execute the code specified in the file.</b>
@@ -533,7 +541,7 @@
       <h2>Example Runs</h2>
       Input File:
       <div class="well">
-        "dlroW olleH"PPPPPPPPPPP
+        "dlroW olleH"PPPPPPPPPPPQ
       </div>
       Output:
       <div class="well">
@@ -544,11 +552,11 @@
 
       Input File:
       <div class="well">
-        ________D
+        _________D
         <br />
-        D"Hello"L
+        D"Hello"_L
         <br />
-        RPPPPP18J
+        RPPPPP18JQ
       </div>
 
       Output:
