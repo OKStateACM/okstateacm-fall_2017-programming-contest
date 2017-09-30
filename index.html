@@ -72,7 +72,10 @@
       Input: A string
       <br />
       Output: The string printed diagonally and in reverse
-
+      
+      <h2>Constraints</h2>
+      0 &lt;= length of string &lt;= 20
+      
       <h2>Example Run</h2>
       Input: <kbd>Pistol Pete</kbd>
       <br>
@@ -108,13 +111,14 @@
       Input2: another string that is the encrypted form of Input1
       <br />
       Output: The key used to encrypt Input1 into Input2
-      <hr />
+
+      <h2>Constraints</h2>
       Assume that only letters a-z will be in the input. No need to worry about punctuation or capital letters.
-      <hr />
+      <br />
       The encryption scheme wraps around, i.e. <code>z + 3 = c</code>, <code>c + 25 = b</code>, <code>z + 20 = t</code>
-      <hr />
+      <br />
       You can assume that Input2 will always be the correct encrypted form of Input1.
-      <hr />
+      <br />
       <b>Note: </b> The ascii range for a-z starts with a at 97. If you want to work with a-z as 1-26 subtract 96 from the char.
       <br />
 
@@ -137,6 +141,10 @@
       <br />
       Output: Exactly as specified in problem
       <br />
+
+      <h2>Constraints</h2>
+      0 &lt;= n &lt;= 50
+
       <h2>Example Run</h2>
       Input: <kbd>4 Sun Moon Stellar Balloon</kbd>
       <br />
@@ -172,7 +180,7 @@
         7 4 1
       </div>
       A 2 dimensional array is said to be palindromic if there is no difference between it and it's reverse image.
-      <b>Write a program that reads in a 2 dimensional array from a file whose filename is specified by either stdin or a command line argument, and checks to see if that 2 dimensional array is palindromic</b>
+      <b>Write a program that reads in a 2 dimensional array of height h and width w from a file whose filename is specified by either stdin or a command line argument, and checks to see if that 2 dimensional array is palindromic</b>
 
       <h2>Specifications</h2>
       Input: File name of a file containing a 2 dimensional array (either parsed as a command line argument or read from stdin)
@@ -180,6 +188,11 @@
       File: The file should contain a 2 dimensional array of elements, where each row is a line, and each element in each row is seperated by a space.
       <br />
       Output: A message stating whether or not that 2 dimensional array is palindromic.
+
+      <h2>Constraints</h2>
+      1 &lt;= h &lt;= 100
+      <br>
+      1 &lt;= w &lt;= 100
 
       <h2>Example Run</h2>
       File Name to Read: <kbd>2darray.txt</kbd>
@@ -229,8 +242,12 @@
       </div>
       <b>Write a program that, when given a number <code>x</code>, determines if <code>x</code> is in the the first 45 elements of the fibonacci sequence. If <code>x</code> is in the first 45 elements of the fibonacci sequence, let <code>n</code> be equal to the index in the fibonacci sequence of the first occurence of <code>x</code>. i.e. <code>fib(n) = x</code>. Now that you have <code>n</code> determine what <code>rec(n)</code> is. If <code>x</code> is not in the fibonacci sequence, inform the user and quit the program.</b>
       <h2>Specifications</h2>
+      Input: An integer <code>n</code>
+      <br>
+      Output: <code>rec(n)</code> where <code>fib(n) = x</code> <b>or</b> a message stating that <code>n</code> is not in the first 45 elements of the fibonacci sequence.
+
+      <h2>Constraints</h2>
       <p>n &lt;= 701408733</p>
-      <hr />
       <p>You only have to check if n is one of the first 45 elements of the fibonacci sequence, that is <code>fib(0)</code> up to and incuding <code>fib(44)</code>.</p>
       <h2>Example Runs</h2>
       Input: <kbd>4181</kbd> (This is the same as <code>fib(19)</code>)
@@ -254,11 +271,11 @@
       <div class="well">
         Start with any positive integer <code>n</code>.
         <br />
-        if (3n + 1) is odd:
+        if n is odd:
         <br />
         &nbsp;&nbsp;The next term in the sequence will be (3n + 1)
         <br />
-        if (3n + 1) is even:
+        if n is even:
         <br />
          &nbsp;&nbsp;The next term in the sequence will be n/2
         <br />
@@ -277,6 +294,9 @@
       Input: an integer n, representing a length.
       <br />
       Output: The smallest positive integer whose Collatz sequence is of that length.
+
+      <h2>Constraints</h2>
+      1 &lt;= n &lt;= 300
 
       <h2>Example Run</h2>
       Length: <kbd>3</kbd>
@@ -415,8 +435,6 @@
 
     <hr />
 
-    <!-- TODO Show Grid System Better -->
-
     <h1>Problem 9: On The Grid (What the Funge?) (20 points)</h1>
     <div class="well">
       <a href="https://esolangs.org/wiki/Befunge">Befunge</a> is an esoteric programming language that
@@ -486,7 +504,7 @@
           <td>_</td>
           <td>P</td>
           <td>D</td>
-        </tr
+        </tr>
         <tr>
           <td>Q</td>
           <td>_</td>
