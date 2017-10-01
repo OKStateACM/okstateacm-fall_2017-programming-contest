@@ -32,25 +32,25 @@
 
   <div class="container">
 
-    <div class="panel panel-primary">
+    <div class="panel panel-default">
       <div class="panel-heading">
         <h1>Instructions</h1>
       </div>
       <div class="panel-body">
-        Use Java, C, C++, or Python (2 or 3) to implement a solution to the problems listed below.
+        Use <strong>Java, C, C++, or Python (2 or 3)</strong> to implement a solution to the problems listed below.
         When you are done, come pass it off to one of the judges.
         You have from now until 8:30 P.M. Most points win. Good luck.
       </div>
     </div>
 
-    <div class="panel panel-primary">
+    <div class="panel panel-default">
       <div class="panel-heading">
         <h1>Rules</h1>
       </div>
       <div class="panel-body">
         <ul>
-          <li>All of OSU's academic integrity rules apply. You are free to use google/your friends so long as your code is your own.</li>
-          <li>Unless the problem specifies otherwise, all input will be read from stdin (so, for java this means a Scanner reading System.in)</li>
+          <li>All of OSU's academic integrity rules apply. You are free to use Google/your friends so long as your code is your own.</li>
+          <li>Unless the problem specifies otherwise, all input will be read from stdin (so, for Java this means a Scanner reading System.in)</li>
           <li>You must be standing in line to pass your code off before 8:31 P.M. in order to get credit for the problem.</li>
           <li>If you come to one of the judges to pass off a program and it doesn't work, you may fix it and come back as many times as necessary, given it is still before 8:31 P.M.</li>
           <li>If any problem seems too ambigous, ask a judge to clarify.</li>
@@ -58,13 +58,25 @@
       </div>
     </div>
 
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1>Thank You To Our Sponsors</h1>
+      </div>
+      <div class="panel-body">
+        <center><a href="http://paycomonline.com"><img src="images/paycom_logo.png" alt="Paycom Logo"></a></center><br />
+        The ACM would like to extend a huge thank you to <a href="http://www.paycomonline.com/">Paycom</a>
+        for sponsoring tonight's Programming Competition! Paycom provided tonight's pizza and prizes.
+        We are incredibly thankful for their support.
+      </div>
+    </div>
+
     <hr>
 
-    <h1>Problems</h1>
+    <h1 style="margin: 50px;"><center><strong>Problems</strong></center></h1>
 
     <hr>
 
-    <h1>Problem 1: Diagonally Reversed (1 point)</h1>
+    <h1><span class="orange">Problem 1:</span> Diagonally Reversed (1 point)</h1>
     <div class="well">
       <h2>Instructions</h2>
       <strong>Given an input read from stdin, print it backwards and diagonally.</strong>
@@ -97,7 +109,7 @@
 
     <hr>
 
-    <h1>Problem 2: Caesar Cipher (1 point)</h1>
+    <h1><span class="orange">Problem 2:</span> Caesar Cipher (1 point)</h1>
     <div class="well">
       <h2>Instructions</h2>
       The Caesar cipher is a (<em>very</em> outdated...) method of encryption that uses a key, also known as a shift, to encrypt messages.
@@ -132,7 +144,7 @@
 
     <hr>
 
-    <h1>Problem 3: The rorrim mirror (1 point)</h1>
+    <h1><span class="orange">Problem 3:</span> The rorrim mirror (1 point)</h1>
     <div class="well">
       <h2>Instructions</h2>
       <strong>Given an integer <em>n</em>, and a list of <em>n</em> words, print out <em>n</em> lines. Each line should have one of the words from the list, first printed backwards, then printed forwards, with one space in between. On any given line, there must be enough leading spaces so that the first character of the words line up on the printout.</strong>
@@ -159,7 +171,7 @@
 
     <hr>
 
-    <h1>Problem 4: 2D Palindromes (2 points)</h1>
+    <h1><span class="orange">Problem 4:</span> 2D Palindromes (2 points)</h1>
     <div class="well">
       <h2>Instructions</h2>
       A two-dimensional array is a rectangular array of elements. The reverse image of a two-dimensional array is defined to be the array reversed in both directions.
@@ -223,27 +235,33 @@
     <hr />
 
 
-    <h1>Problem 5: So many integer sequences... (3 points)</h1>
+    <h1><span class="orange">Problem 5:</span> So many integer sequences... (3 points)</h1>
     <div class="well">
       <h2>Instructions</h2>
-      This problem involves two integer sequences: the Fibonacci series and Recamán's sequence:</br>
+      This problem involves two integer sequences: the Fibonacci series and Recamán's sequence.</br>
       The Fibonacci series is defined as follows:
       <div class="well">
-        fib(0) = 0
-        fib(1) = 1
-        When n ≥ 2, fib(n) = fib(n-1) + fib(n-2)
+        fib(0) = 0<br />
+        fib(1) = 1<br />
+        <em>When n ≥ 2,</em> fib(n) = fib(n-1) + fib(n-2)
         <br />
         <a href="http://oeis.org/A000045">(more info)</a>
       </div>
       Recamán's sequence, is defined as follows:
       <div class="well">
-        rec(0) = 0;
+        rec(0) = 0
         <br />
-        for n &gt; 0, rec(n) = rec(n-1)-n if rec(n-1)-n is positive and not already in the sequence,
-        <br />
-        otherwise rec(n) = rec(n-1)+n. <a href="http://oeis.org/A005132">(more info)</a>
+        <em>When n &gt; 0,</em>
+        <br />&nbsp;&nbsp;<em>If (rec(n-1) - n) &gt; 0 and is not in sequence,</em> rec(n) = rec(n-1) - n
+        <br />&nbsp;&nbsp;<em>Otherwise,</em> rec(n) = rec(n-1) + n.
+        <br /><a href="http://oeis.org/A005132">(more info)</a>
       </div>
-      <strong>Write a program that, when given a number <code>x</code>, determines if <code>x</code> is in the the first 45 elements of the fibonacci sequence. If <code>x</code> is in the first 45 elements of the fibonacci sequence, let <code>n</code> be equal to the index in the fibonacci sequence of the first occurence of <code>x</code>. i.e. <code>fib(n) = x</code>. Now that you have <code>n</code> determine what <code>rec(n)</code> is. If <code>x</code> is not in the fibonacci sequence, inform the user and quit the program.</strong>
+      <strong>Write a program that, when given a number <code>x</code>, determines if <code>x</code> is in
+          the the first 45 elements of the Fibonacci series. If <code>x</code> is in the first 45 elements
+          of the Fibonacci series, let <code>n</code> be equal to the <em>index</em> in the Fibonacci series
+          of the first occurence of <code>x</code>, i.e. <code>fib(n) = x</code>. Now that you have <code>n</code>
+          determine what <code>rec(n)</code> is. If <code>x</code> is not in the Fibonacci series, inform the user
+          and quit the program.</strong>
       <h2>Specifications</h2>
       <strong>Input:</strong> An integer <code>n</code>
       <br>
@@ -267,7 +285,7 @@
     </div>
 
     <hr />
-    <h1>Problem 6: Collatz (3 points)</h1>
+    <h1><span class="orange">Problem 6:</span> Collatz (3 points)</h1>
     <div class="well">
       <h2>Instructions</h2>
       The Collatz sequence is defined as:
@@ -311,7 +329,7 @@
       <br />
 
       <h2>Reference</h2>
-      <table width="100%" style="text-align: center;">
+      <table width="100%" style="text-align: center;" class="table table-striped">
           <tr>
               <th style="text-align: center;">Number</th>
               <th style="text-align: center;">Collatz Sequence</th>
@@ -347,7 +365,7 @@
 
     <hr />
 
-    <h1>Problem 7: Rattle Battle (6 points)</h1>
+    <h1><span class="orange">Problem 7:</span> Rattle Battle (6 points)</h1>
     <div class="well">
       <h2>Instructions</h2>
       <strong>Baby Henry is missing his rattle. To get to it, he must
@@ -414,7 +432,7 @@
 
     <hr />
 
-    <h1>Problem 8: BB-8's Dilemna (6 points)</h1>
+    <h1><span class="orange">Problem 8:</span> BB-8's Dilemna (6 points)</h1>
     <div class="well">
       <h2>Instructions</h2>
       The droid BB-8 got stuck in a cavern. You need to help BB-8 get out. You know that the cavern is flat and consists of <em>N</em> "rooms". You also know that there are <em>H</em>*<em>W</em> number of rooms, where <em>H</em> is the height of the cavern and <em>W</em> is the width of the cavern. Assume that each "room" takes up one space.
@@ -474,7 +492,7 @@
 
     <hr />
 
-    <h1>Problem 9: On The Grid (What the Funge?) (20 points)</h1>
+    <h1><span class="orange">Problem 9: On The Grid (What the Funge?)</span> (20 points)</h1>
     <div class="well">
       <a href="https://esolangs.org/wiki/Befunge">Befunge</a> is an esoteric programming language that
       uses a grid system. It was designed specifically to be the hardest programming language to write
@@ -629,16 +647,6 @@
     </div>
 
     <hr>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h1>Thank You To Our Sponsors</h1>
-      </div>
-      <div class="panel-body">
-        <img src="images/paycom_logo.png" alt="Paycom Logo">
-        <h3>Huge thank you to <a href="http://www.paycomonline.com/">Paycom</a> for providing pizza and prizes for this Programming Competition!</h3>
-      </div>
-    </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
