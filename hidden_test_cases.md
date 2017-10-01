@@ -38,7 +38,7 @@
 ## Problem 2
   - Input1: <kbd>hello</kbd>
     <br>
-    Input2: <kbd>byff</kbd>
+    Input2: <kbd>byffi</kbd>
     <br>
     Output: 20
 
