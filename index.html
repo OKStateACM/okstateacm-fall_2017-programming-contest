@@ -67,15 +67,15 @@
     <h1>Problem 1: Diagonally Reversed (1 point)</h1>
     <div class="well">
       <h2>Instructions</h2>
-      <b>Given an input read from stdin, print it backwards and diagonally.</b>
+      <strong>Given an input read from stdin, print it backwards and diagonally.</strong>
       <h2>Specifications</h2>
-      Input: A string
+      <strong>Input:</strong> A string
       <br />
-      Output: The string printed diagonally and in reverse
-      
+      <strong>Output:</strong> The string printed diagonally and in reverse
+
       <h2>Constraints</h2>
-      0 &lt;= length of string &lt;= 20
-      
+      0 ≤ length of string ≤ 20
+
       <h2>Example Run</h2>
       Input: <kbd>Pistol Pete</kbd>
       <br>
@@ -100,34 +100,34 @@
     <h1>Problem 2: Caesar Cipher (1 point)</h1>
     <div class="well">
       <h2>Instructions</h2>
-      The caesar cipher is a (very outdated...) method of encryption that uses a key, also known as a shift, to encrypt messages.
+      The Caesar cipher is a (<em>very</em> outdated...) method of encryption that uses a key, also known as a shift, to encrypt messages.
               <br />
               To encrypt any letter of the alphabet, you simply add the shift to it. For example, with a shift of <code>3</code>, <code>a</code> becomes <code>a + 3</code> which is <code>d</code>, <code>b</code> becomes <code>e</code>, etc. <a href="https://github.com/OKStateACM/CryptoWorkshop/blob/master/Notes_draft.md">Some more info on the notes from our cryptography workshop</a>
               <br />
-              Brutus wants to figure out what key Caesar most commonly uses. He somehow has access to several messages and their encrypted counterparts. <b>Write a program to help Brutus figure out what key was used to encrypt a certain message.</b>
+              Brutus wants to figure out what key Caesar most commonly uses. He somehow has access to several messages and their encrypted counterparts. <strong>Write a program to help Brutus figure out what key was used to encrypt a certain message.</strong>
       <h2>Specifications</h2>
-      Input1: a plaintext String
+      <strong>Input 1:</strong> a plaintext String
       <br />
-      Input2: another string that is the encrypted form of Input1
+      <strong>Input 2:</strong> another string that is the encrypted form of Input1
       <br />
-      Output: The key used to encrypt Input1 into Input2
+      <strong>Output:</strong> The key used to encrypt Input 1 into Input 2
 
       <h2>Constraints</h2>
-      Assume that only letters a-z will be in the input. No need to worry about punctuation or capital letters.
+      Assume that only letters <code>a</code>-<code>z</code> will be in the input. No need to worry about punctuation or capital letters.
       <br />
       The encryption scheme wraps around, i.e. <code>z + 3 = c</code>, <code>c + 25 = b</code>, <code>z + 20 = t</code>
       <br />
-      You can assume that Input2 will always be the correct encrypted form of Input1.
+      You can assume that Input 2 will always be the correct encrypted form of Input 1.
       <br />
-      <b>Note: </b> The ascii range for a-z starts with a at 97. If you want to work with a-z as 1-26 subtract 96 from the char.
+      <strong>Note: </strong> The ASCII range for <code>a</code>-<code>z</code> starts with <code>a</code> at 97. If you want to work with <code>a</code>-<code>z</code> as 1-26 subtract 96 from the char.
       <br />
 
       <h2>Example Run</h2>
-      Plain text: <kbd>gopokes</kbd>
+      <strong>Plaintext:</strong> <kbd>gopokes</kbd>
       <br />
-      Encrypted text: <kbd>ltutpjx</kbd>
+      <strong>Encrypted text:</strong> <kbd>ltutpjx</kbd>
       <br />
-      Key Used: 5
+      <strong>Key Used:</strong> 5
     </div>
 
     <hr>
@@ -135,20 +135,20 @@
     <h1>Problem 3: The rorrim mirror (1 point)</h1>
     <div class="well">
       <h2>Instructions</h2>
-      <b>Given an integer n, and a list of n words, print out n lines. Each line should have one of the words from the list, first printed backwards, then printed forwards, with one space inbetween. On any given line, there must be enough leading spaces so that the first character of the words line up on the printout.</b>
+      <strong>Given an integer <em>n</em>, and a list of <em>n</em> words, print out <em>n</em> lines. Each line should have one of the words from the list, first printed backwards, then printed forwards, with one space in between. On any given line, there must be enough leading spaces so that the first character of the words line up on the printout.</strong>
       <h2>Specifications</h2>
-      Input: Integer n, followed by n words
+      <strong>Input:</strong> One line containing the integer <em>n</em>, followed by <em>n</em> words
       <br />
       Output: Exactly as specified in problem
       <br />
 
       <h2>Constraints</h2>
-      0 &lt;= n &lt;= 50
+      0 ≤ n ≤ 50
 
       <h2>Example Run</h2>
-      Input: <kbd>4 Sun Moon Stellar Balloon</kbd>
+      <strong>Input:</strong> <kbd>4 Sun Moon Stellar Balloon</kbd>
       <br />
-      Output:
+      <strong>Output:</strong>
       <div class="well">
         <p>&nbsp;&nbsp;&nbsp;&nbsp;nuS Sun</p>
         <p>&nbsp;&nbsp;&nbsp;nooM Moon</p>
@@ -162,7 +162,7 @@
     <h1>Problem 4: 2D Palindromes (2 points)</h1>
     <div class="well">
       <h2>Instructions</h2>
-      A 2 dimensional array is a rectangular array of elements. The reverse image of a 2 dimensional array is defined to be the array reversed in both directions.
+      A two-dimensional array is a rectangular array of elements. The reverse image of a two-dimensional array is defined to be the array reversed in both directions.
       For example, the reverse image of
       <div class="well">
         1 4 7
@@ -179,23 +179,23 @@
         <br />
         7 4 1
       </div>
-      A 2 dimensional array is said to be palindromic if there is no difference between it and it's reverse image.
-      <b>Write a program that reads in a 2 dimensional array of height h and width w from a file whose filename is specified by either stdin or a command line argument, and checks to see if that 2 dimensional array is palindromic</b>
+      A two-dimensional array is said to be <em>palindromic</em> if there is no difference between it and its reverse image.
+      <strong>Write a program that reads in a two-dimensional array of height <em>h</em> and width <em>w</em> from a file whose filename is specified by either stdin or a command line argument, and checks to see if that two-dimensional array is palindromic</strong>
 
       <h2>Specifications</h2>
-      Input: File name of a file containing a 2 dimensional array (either parsed as a command line argument or read from stdin)
+      <strong>Input:</strong> File name of a file containing a 2 dimensional array (either parsed as a command line argument or read from stdin)
       <br />
-      File: The file should contain a 2 dimensional array of elements, where each row is a line, and each element in each row is seperated by a space.
+      <strong>File:</strong> The file will contain a two-dimensional array of elements, where each row is a line, and each element in each row is seperated by a space.
       <br />
-      Output: A message stating whether or not that 2 dimensional array is palindromic.
+      <strong>Output:</strong> A message stating whether or not that two-dimensional array is palindromic.
 
       <h2>Constraints</h2>
-      1 &lt;= h &lt;= 100
+      1 ≤ h ≤ 100
       <br>
-      1 &lt;= w &lt;= 100
+      1 ≤ w ≤ 100
 
       <h2>Example Run</h2>
-      File Name to Read: <kbd>2darray.txt</kbd>
+      <strong>File Name to Read:</strong> <kbd>2darray.txt</kbd>
       <br />
       (where 2darray.txt looks like this):
       <div class="well">
@@ -205,9 +205,9 @@
         <br />
         3 2 1
       </div>
-      Output: This 2 dimensional array is palindromic.
+      <strong>Output:</strong> This two-dimensional array is palindromic.
       <hr />
-      File Name to Read: <kbd>2darray.txt</kbd>
+      <strong>File Name to Read:</strong> <kbd>2darray.txt</kbd>
       <br />
       (where 2darray.txt looks like this):
       <div class="well">
@@ -217,7 +217,7 @@
         <br />
         3 4 2
       </div>
-      Output: This 2 dimensional array is not palindromic.
+      <strong>Output:</strong> This two-dimensional array is not palindromic.
     </div>
 
     <hr />
@@ -226,11 +226,14 @@
     <h1>Problem 5: So many integer sequences... (3 points)</h1>
     <div class="well">
       <h2>Instructions</h2>
-      The fibonacci sequence is defined as follows:
+      This problem involves two integer sequences: the Fibonacci series and Recamán's sequence:</br>
+      The Fibonacci series is defined as follows:
       <div class="well">
-        fib(n) = fib(n-1) + fib(n-2),
+        fib(0) = 0
+        fib(1) = 1
+        When n ≥ 2, fib(n) = fib(n-1) + fib(n-2)
         <br />
-        with fib(0) = 0 and fib(1) = 1 <a href="http://oeis.org/A000045">(more info)</a>
+        <a href="http://oeis.org/A000045">(more info)</a>
       </div>
       Recamán's sequence, is defined as follows:
       <div class="well">
@@ -240,27 +243,27 @@
         <br />
         otherwise rec(n) = rec(n-1)+n. <a href="http://oeis.org/A005132">(more info)</a>
       </div>
-      <b>Write a program that, when given a number <code>x</code>, determines if <code>x</code> is in the the first 45 elements of the fibonacci sequence. If <code>x</code> is in the first 45 elements of the fibonacci sequence, let <code>n</code> be equal to the index in the fibonacci sequence of the first occurence of <code>x</code>. i.e. <code>fib(n) = x</code>. Now that you have <code>n</code> determine what <code>rec(n)</code> is. If <code>x</code> is not in the fibonacci sequence, inform the user and quit the program.</b>
+      <strong>Write a program that, when given a number <code>x</code>, determines if <code>x</code> is in the the first 45 elements of the fibonacci sequence. If <code>x</code> is in the first 45 elements of the fibonacci sequence, let <code>n</code> be equal to the index in the fibonacci sequence of the first occurence of <code>x</code>. i.e. <code>fib(n) = x</code>. Now that you have <code>n</code> determine what <code>rec(n)</code> is. If <code>x</code> is not in the fibonacci sequence, inform the user and quit the program.</strong>
       <h2>Specifications</h2>
-      Input: An integer <code>n</code>
+      <strong>Input:</strong> An integer <code>n</code>
       <br>
-      Output: <code>rec(n)</code> where <code>fib(n) = x</code> <b>or</b> a message stating that <code>n</code> is not in the first 45 elements of the fibonacci sequence.
+      <strong>Output:</strong> <code>rec(n)</code> where <code>fib(n) = x</code> <strong>or</strong> a message stating that <code>n</code> is not in the first 45 elements of the fibonacci sequence.
 
       <h2>Constraints</h2>
-      <p>n &lt;= 701408733</p>
-      <p>You only have to check if n is one of the first 45 elements of the fibonacci sequence, that is <code>fib(0)</code> up to and incuding <code>fib(44)</code>.</p>
+      <p>n ≤ 701408733</p>
+      <p>You only have to check if <em>n</em> is one of the first 45 elements of the Fibonacci sequence, that is <code>fib(0)</code> up to and incuding <code>fib(44)</code>.</p>
       <h2>Example Runs</h2>
-      Input: <kbd>4181</kbd> (This is the same as <code>fib(19)</code>)
+      <strong>Input:</strong> <kbd>4181</kbd> <em>(This is the same as <code>fib(19)</code>)</em>
       <br />
-      Output: 62 (This is the same as <code>rec(19)</code>)
+      <strong>Output:</strong> 62 <em>(This is the same as <code>rec(19)</code>)</em>
       <hr />
-      Input: <kbd>701408733</kbd>
+      </strong>Input:</strong> <kbd>701408733</kbd>
       <br />
-      Output: 36
+      <strong>Output:</strong> 36
       <hr />
-      Input: <kbd>9</kbd>
+      <strong>Input:</strong> <kbd>9</kbd>
       <br />
-      Output: 9 is not in the first 45 elements of the fibonacci sequence
+      <strong>Output:</strong> 9 is not in the first 45 elements of the fibonacci sequence
     </div>
 
     <hr />
@@ -269,41 +272,77 @@
       <h2>Instructions</h2>
       The Collatz sequence is defined as:
       <div class="well">
-        Start with any positive integer <code>n</code>.
+        Start with any positive integer <em>n</em>.
         <br />
-        if n is odd:
+        if <em>n</em> is odd:
         <br />
-        &nbsp;&nbsp;The next term in the sequence will be (3n + 1)
+        &nbsp;&nbsp;The next term in the sequence will be <em>3n + 1</em>
         <br />
-        if n is even:
+        if <em>n</em> is even:
         <br />
-         &nbsp;&nbsp;The next term in the sequence will be n/2
+         &nbsp;&nbsp;The next term in the sequence will be <em>n/2</em>
         <br />
-        We do this until we reach one.
+        We do this until we reach 1. For your reference, the first five Collatz sequences have been provided as a table below.
       </div>
       For example, the Collatz sequence of 3 is:
       <div class="well">
-        3 -&gt; 10 -&gt; 5 -&gt; 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1
+        3 → 10 → 5 → 16 → 8 → 4 → 2 → 1
       </div>
       The length of the above Collatz sequence is 8
 
       <br />
-      <b>Write a program that, when given a length, finds the smallest positive integer whose Collatz sequence is of that length</b>
+      <strong>Write a program that, when given a length, finds the smallest positive integer whose Collatz sequence is of that length</strong>
 
       <h2>Specifications</h2>
-      Input: an integer n, representing a length.
+      <strong>Input:</strong> an integer <em>n</em>, representing a Collatz sequence length.
       <br />
-      Output: The smallest positive integer whose Collatz sequence is of that length.
+      <strong>Output:</strong> The smallest positive integer whose Collatz sequence is of that length.
 
       <h2>Constraints</h2>
-      1 &lt;= n &lt;= 300
+      1 ≤ n ≤ 300
 
       <h2>Example Run</h2>
-      Length: <kbd>3</kbd>
+      <strong>Length:</strong> <kbd>3</kbd>
       <br />
-      Smallest Positive Integer with Length 3: 4
+      <strong>Smallest Positive Integer with Length 3:</strong> 4
       <br />
-      (because the collatz sequence of 4 is 4 -&gt; 2 -&gt; 1, which is of length 3)
+      (because the Collatz sequence of 4 is 4 → 2 → 1, which is of length 3)
+
+      <br />
+
+      <h2>Reference</h2>
+      <table width="100%" style="text-align: center;">
+          <tr>
+              <th style="text-align: center;">Number</th>
+              <th style="text-align: center;">Collatz Sequence</th>
+              <th style="text-align: center;">Sequence Length</th>
+          </tr>
+          <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+          </tr>
+          <tr>
+              <td>2</td>
+              <td>2 → 1</td>
+              <td>2</td>
+          </tr>
+          <tr>
+              <td>3</td>
+              <td>3 → 10 → 5 → 16 → 8 → 4 → 2 → 1</td>
+              <td>8</td>
+          </tr>
+          <tr>
+              <td>4</td>
+              <td>4 → 2 → 1</td>
+              <td>3</td>
+          </tr>
+          <tr>
+              <td>5</td>
+              <td>5 → 16 → 8 → 4 → 2 → 1</td>
+              <td>6</td>
+          </tr>
+      </table>
     </div>
 
     <hr />
@@ -311,7 +350,7 @@
     <h1>Problem 7: Rattle Battle (6 points)</h1>
     <div class="well">
       <h2>Instructions</h2>
-      <b>Baby Henry is missing his rattle. To get to it, he must
+      <strong>Baby Henry is missing his rattle. To get to it, he must
       cross the floor from his current position to the position
       of the rattle, avoiding obstacles as he goes.  Henry
       is impatient, he would like to find the fastest way to get
@@ -319,19 +358,19 @@
       can crawl one foot Left, Right, Up, or Down in one unit time.
       Your job is to help Henry by printing out an optimal path
       for him. If there is more than one optimal path, print any
-      one of them.</b>
+      one of them.</strong>
 
       <h2>Specifications</h2>
-      Input:
+      <strong>Input:</strong>
       <div class="well">
-        Input will consist of a number n followed by n strings
-        of size n.  "X" characters in the strings represent
-        obstacles where Henry cannot go. "H" represents his
-        current position, and "R" represent the position of
-        the rattle.  "." characters are open floor where Henry
+        Input will consist of a number <em>n</em> followed by <em>n</em> strings
+        of size n.  <code>X</code> characters in the strings represent
+        obstacles where Henry cannot go. <code>H</code> represents his
+        current position, and <code>R</code> represents the position of
+        the rattle. <code>.</code> characters are open floor where Henry
         may crawl.
       </div>
-      Output:
+      <strong>Output:</strong>
       <div class="well">
         For a given input, print a sequence of LRUD letters
         corresponding to an optimal route for Henry.
@@ -339,7 +378,7 @@
 
       <h2>Example Runs</h2>
 
-      Input (read from stdin or from a file, your choice):
+      <strong>Input <em>(read from stdin or from a file, your choice)</em>:</strong>
       <div class="well">
         4
         <br />
@@ -351,11 +390,11 @@
         <br />
         XXXX
       </div>
-      Output: RRRDD
+      <strong>Output:</strong> RRRDD
 
       <hr />
 
-      Input (read from stdin or from a file, your choice):
+      <strong>Input <em>(read from stdin or from a file, your choice)</em>:</strong>
       <div class="well">
         5
         <br />
@@ -369,7 +408,7 @@
         <br />
         XXXXX
       </div>
-      Output: LDDDLL
+      <strong>Output:</strong> LDDDLL
 
     </div>
 
@@ -378,29 +417,29 @@
     <h1>Problem 8: BB-8's Dilemna (6 points)</h1>
     <div class="well">
       <h2>Instructions</h2>
-      The droid BB-8 got stuck in a cavern. You need to help BB-8 get out. You know that the cavern is flat and consists of N "rooms". You also know that there are H*W number of rooms, where H is the height of the cavern and W is the width of the cavern. Assume that each "room" takes up one space.
+      The droid BB-8 got stuck in a cavern. You need to help BB-8 get out. You know that the cavern is flat and consists of <em>N</em> "rooms". You also know that there are <em>H</em>*<em>W</em> number of rooms, where <em>H</em> is the height of the cavern and <em>W</em> is the width of the cavern. Assume that each "room" takes up one space.
       <br />
       <br />
       Assume that BB-8 starts at the bottom left of the cavern and needs to get to the top right where the exit is. BB-8 can only move to the right or up (that is, cannot move left or down). Going into each room has a cost associated with it. The goal is to to get BB-8 out of the cavern while minimizing the cost.
       <br />
       <br />
-      <b>Given a cavern layout with cost, print the path of BB-8 as well as the minimum cost.</b>
+      <strong>Given a cavern layout with cost, print the path of BB-8 as well as the minimum cost.</strong>
 
       <h2>Specifications</h2>
-      H = Height of Cavern, W = Width of Cavern
+      <em>H</em> = Height of Cavern, <em>W</em> = Width of Cavern
       <br />
-      U = Up, R = Right
+      <em>U</em> = Up, <em>R</em> = Right
       <hr />
-      Input: H, W
+      <strong>Input:</strong> H, W
       <br />
-      Input: Cavern Layout with cost, this can be either read in from stdin or from a file. See below for example.
+      <strong>Input:</strong> Cavern Layout with cost, this can be either read in from stdin or from a file. See below for example.
       <br />
-      Output: The optimal path, represented with Us and Rs
+      <strong>Output:</strong> The optimal path, represented with <em>U</em>'s and <em>R</em>'s
 
       <h2>Example Run</h2>
-      H: <kbd>4</kbd>
+      <strong>H:</strong> <kbd>4</kbd>
       <br />
-      W: <kbd>3</kbd>
+      <strong>W:</strong> <kbd>3</kbd>
       <br />
       Cavern Layout With Cost:
       <div class="well">
@@ -415,16 +454,16 @@
 
       The shortest path is highlighted (it isn't necessary to show this part in your program, it's just here as a helpful reference):
       <div class="well">
-        <b>1</b> <b>2</b> <b>3</b>
+        <strong>1</strong> <strong>2</strong> <strong>3</strong>
         <br />
-        <b>4</b> 5 6
+        <strong>4</strong> 5 6
         <br />
-        <b>7</b> 8 9
+        <strong>7</strong> 8 9
         <br />
-        <b>1</b> 2 3
+        <strong>1</strong> 2 3
       </div>
 
-      Output:
+      <strong>Output:</strong>
       <div class="well">
         Cost = 18
         <br />
@@ -439,27 +478,28 @@
     <div class="well">
       <a href="https://esolangs.org/wiki/Befunge">Befunge</a> is an esoteric programming language that
       uses a grid system. It was designed specifically to be the hardest programming language to write
-      a compiler for. Each instruction is part of a grid. The interpreter starts at the top left <code>(0, 0)</code>,
-      runs the instruction, then moves right(unless told otherwise) and runs the instruction at that cell.
-      A <a href="https://esolangs.org/wiki/Fungeoid">Fungeoid</a> is any language that is in the befunge family.
-      It must use a grid system, like befunge does. We have defined a simple fungeoid of which the
+      a compiler for. The Befunge code itself is read in and treated like a grid, with the character at each
+      cell representing a different operator. The interpreter starts at the top left <code>(0, 0)</code>,
+      runs the instruction, then moves right (unless told otherwise) and runs the instruction at that cell.
+      A <a href="https://esolangs.org/wiki/Fungeoid">fungeoid</a> is any language that is in the Befunge family.
+      It must use a grid system like Befunge does. We have defined a simple fungeoid of which the
       permitted operations are listed below.
       <table class="table table-striped">
         <tr>
           <td><code>R</code></td>
-          <td>Start moving right</td>
+          <td>Start moving right (east)</td>
         </tr>
         <tr>
           <td><code>L</code></td>
-          <td>Start moving left</td>
+          <td>Start moving left (west)</td>
         </tr>
         <tr>
           <td><code>U</code></td>
-          <td>Start moving up</td>
+          <td>Start moving up (north)</td>
         </tr>
         <tr>
           <td><code>D</code></td>
-          <td>Start moving down</td>
+          <td>Start moving down (south)</td>
         </tr>
         <tr>
           <td><code>0</code>-<code>9</code></td>
@@ -467,7 +507,10 @@
         </tr>
         <tr>
           <td><code>"</code></td>
-          <td>Start string mode: push each character's ASCII value all the way up until the next "</td>
+          <td><strong>Start string mode:</strong> push each character's ASCII value onto the stack all the way up until the next <code>"</code>.
+              (This is instead of doing any operations implied by these characters,
+              e.g. processing a <code>U</code> while in string mode means pushing <code>U</code>'s ASCII value onto the stack
+              without a change in direction)</td>
         </tr>
         <tr>
           <td><code>P</code></td>
@@ -475,11 +518,11 @@
         </tr>
         <tr>
           <td><code>_</code></td>
-          <td><b>no op:</b> proceed to next cell without doing anything</td>
+          <td><strong>no op:</strong> proceed to next cell without doing anything</td>
         </tr>
         <tr>
           <td><code>J</code></td>
-          <td><b>One time jump: </b>Pop a value off the stack which becomes x. Pop another value off the stack which becomes y. Move to cell (x,y) and proceed execution. If you return to the cell in which the J instruction was originally executed, do not execute it again.</td>
+          <td><strong>One-time jump: </strong>Pop a value off the stack which becomes <em>x</em>. Pop another value off the stack which becomes <em>y</em>. Move to cell (x,y) and proceed execution. If you return to the cell in which the <code>J</code> instruction was originally executed, do not execute it again.</td>
         </tr>
         <tr>
           <td><code>Q</code></td>
@@ -521,8 +564,9 @@
         to the right by default, but it's important for later.)</li>
         <li>Moving to the right, the next cell contains <code>"</code> which tells the interpreter
         to enter string mode. Execution continues to move to the right.</li>
-        <li>The next cell contains an 'a'. Since it is in string mode, the 'a' is pushed onto the stack.</li>
-        <li>The next cell contains <code>"</code>, which terminates string mode.</li>
+        <li>The next cell contains an <code>a</code>. Since it is in string mode,
+            the ASCII value of <code>a</code> is pushed onto the stack.</li>
+        <li>The next cell contains <code>"</code>, which ends string mode.</li>
         <li>The next cell is a no op, nothing happens and the interpreter moves right one</li>
         <li>The next cell contains an operation, <code>P</code>, which tells the interpreter
         to pop the top value off of the stack and print it to stdout.</li>
@@ -542,33 +586,33 @@
         In this case, since the last two values pushed to the stack were <code>0</code>
         and <code>0</code>, the interpreter will move to <code>(0, 0)</code>.</li>
         <li>It will go back to <code>(0, 0)</code>. The direction the interpreter was moving before the J
-        operation was <b>left</b>, so after moving to <code>(0, 0)</code> and executing that command it should move left one cell.
-        <b>However, </b>the operation in cell <code>(0, 0)</code> is <code>R</code>, which tells the interpreter to start moving <b>right</b> cell by cell</li>
-        <li>Execution will therefore move to the right, and everything will be the same as before. <b>until...</b></li>
+        operation was <strong>left</strong>, so after moving to <code>(0, 0)</code> and executing that command it should move left one cell.
+        <strong>However, </strong>the operation in cell <code>(0, 0)</code> is <code>R</code>, which tells the interpreter to start moving <strong>right</strong> cell by cell</li>
+        <li>Execution will therefore move to the right, and everything will be the same as before. <strong>until...</strong></li>
         <li>When the interpreter reaches the J instruction, it should not execute it, and execution should continue moving.</li>
         <li>Moving left again, the interpreter encounters a <code>_</code>(no op), and then a <code>Q</code>, which stops execution</li>
       </ul>
 
-      <b>Write an interpreter for this language. It should read in a file and execute the code specified in the file.</b>
+      <strong>Write an interpreter for this language. It should read in a file and execute the code specified in the file.</strong>
 
       <h2>Specifications</h2>
-      Input: A file (specified as a command line argument) which contains valid code.
+      <strong>Input:</strong> A file (specified as a command line argument) which contains valid code.
       <br />
-      Output: Whatever the output of the code specified in the file is.
+      <strong>Output:</strong> Whatever the output of the code specified in the file is.
 
       <h2>Example Runs</h2>
-      Input File:
+      <strong>Input File:</strong>
       <div class="well">
         "dlroW olleH"PPPPPPPPPPPQ
       </div>
-      Output:
+      <strong>Output:</strong>
       <div class="well">
         Hello World
       </div>
 
       <hr />
 
-      Input File:
+      <strong>Input File:</strong>
       <div class="well">
         _________D
         <br />
@@ -577,7 +621,7 @@
         RPPPPP18JQ
       </div>
 
-      Output:
+      <strong>Output:</strong>
       <div class="well">
         HelloHello
       </div>
