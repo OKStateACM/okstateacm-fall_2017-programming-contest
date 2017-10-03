@@ -97,18 +97,128 @@
     Output: No, this is not palindromic
 
 ## Problem 5
-  - Test with n = 701408733 as well as two other random values of n from the attached file
+  - Input:
+    ```
+    2 3
+    1 1
+    1 2 3
+    ```
+  - Output:
+    ```(1, 2), (1, 3)```
+
+  <hr>
+  
+  - Input:
+  ```
+  10 20
+  1 2 3 4 5 6 7 8 9 10 3
+  1 2 3 4 5 6 7 8 9 10 1 1 1 1 1 1 1 1 1 1
+  ```
+  - Output:
+  ```
+  Not enough boots!
+  ```
+
+  <hr>
+
+  - Input:
+  ```
+  20 21
+  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+  21 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 
+  ```
+
+  - Output:
+  ```
+  (1,2), (2,3), (3,4), (4,5), (5,6), (6,7), (7,8), (8,9), (9,10),
+  (10,11), (11,12), (12,13), (13,14), (14,15), (15,16), (16,17),
+  (17,18), (18,19), (19,20), (20,21)
+  ```
 
 ## Problem 6
-  - Test with n = 300 as well as two other random values of n from the attached file
+  - Test with n = 701408733 as well as two other random values of n from the attached file
 
 ## Problem 7
-  - TBD
+  - Test with n = 300 as well as two other random values of n from the attached file
 
 ## Problem 8
-  - TBD
+  - Input:
+  ```
+  6
+  ..R...
+  .XXXX.
+  .XHXX.
+  ....X.
+  ......
+  ......
+  ```
+  - Output:
+  ```
+  DLLUUURR
+  ```
+
+  <hr>
+  
+  - Input:
+  ```
+  9
+  H........
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  .........
+  ........R
+  ```
+  - Output (not unique): 
+  ```
+  DDDDDDDDRRRRRRRR
+  ```
 
 ## Problem 9
+  - Input (this is a corner case):
+  ```
+  H = 1, W = 1
+  5
+  ```
+  - Output:
+  ```
+  Cost = 5
+  _blank_
+  ```
+
+  <hr>
+  
+  - Input:
+  ```
+  H = 2, W = 1
+  7
+  2
+  ```
+  - Output:
+  ```
+  Cost = 9
+  U
+  ```
+
+  <hr>
+  
+  - Input:
+  ```
+  H = 3, W = 4
+  2 4 6 9
+  3 1 2 4
+  8 5 3 1
+  ```
+  - Output:
+  ```
+  Cost = 27
+  U, R, R, R, U
+  ```
+
+## Problem 10
   - Again, this one will be time consuming to judge. Thankfully it's designed so you probably won't have to do it often. Just make sure you type everything down correctly.
   
   - **NOTE**: Do not include the spaces I put between each charater, that is just used to better tell how many underscores there are
