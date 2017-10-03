@@ -492,7 +492,80 @@
 
     <hr />
 
-    <h1><span class="orange">Problem 9</span>: On The Grid (What the Funge?) (20 points)</h1>
+    <h1><span class="orange">Problem 9</span>: The Vain Centipede</h1>
+    <div class="well">
+      Cedric the centipede likes to wear boots. Of course, like many
+      centipedes, Cedric does not actually have exactly 100 feet, but he has
+      quite a few. Each of Cedric's feet has a size. Cedric has gone to
+      the the Tiny Cobbler shoe store trying to get boots for each one
+      of his feet. Each of the boots at the store also has a size,
+      and only boots which are as large as Cedric's feet or larger
+      can fit on his feet.
+
+      Since Cedric is very vain, he would like to have the largest
+      boots possible on his feet, all bought from the same store.
+      <strong>Can you help Cedric get the largest boots for his feet?</strong>
+
+      <h2>Specifications</h2>
+      Input:
+      <div class="well">
+        The input will consist of two integers, m, and n, followed
+        by m foot sizes, and n boot sizes, all of which are integers.
+      </div>
+
+      Output:
+      <div class="well">
+        <p>Output will be one of the following:</p>
+        <ol>
+          <li>
+            a list of foot size-boot size pairs such that the sum
+            of the shoe sizes is maximized. The output should be sorted 
+            by foot size
+          </li>
+          <li>
+            The statement "not enough boots!" if the shoe store
+            does not have enough boots to cover Cedric's feet in the
+            required sizes.
+          </li>
+        </ol>
+      </div>
+
+      <h2>Constraints</h2>
+      m &lt; n &lt; 200
+
+      <h2>Example Runs</h2>
+      Input:
+      <div class="well">
+        5 7
+        <br>
+        1 7 4 3 5
+        <br>
+        4 5 1 2 1 1 9 9
+      </div>
+
+      Output:
+      <div class="well">
+        (1,2), (3,4), (4,5), (5,9), (7,9)
+      </div>
+
+      <hr>
+      
+      Input:
+      <div class="well">
+        6 9
+        <br>
+        1 5 7 9 11 3
+        <br>
+        15 1 1 1 1 8 8 8 1
+      </div>
+
+      Output:
+      <div class="well">
+        Not enough boots!
+      </div>
+    </div>
+
+    <h1><span class="orange">Problem 10</span>: On The Grid (What the Funge?) (20 points)</h1>
     <div class="well">
       <a href="https://esolangs.org/wiki/Befunge">Befunge</a> is an esoteric programming language that
       uses a grid system. It was designed specifically to be the hardest programming language to write
