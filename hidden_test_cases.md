@@ -136,7 +136,14 @@
   ```
 
 ## Problem 6
-  - Test with n = 701408733 as well as two other random values of n from the attached file
+  - Input: <kbd>196418</kbd>
+  - Output: 16
+  <hr>
+  - Input: <kbd>46</kbd>
+  - Output: 46 is not in the fibonacci sequence before 45
+  <hr>
+  - Input: <kbd>24157817</kbd>
+  - Output: 77
 
 ## Problem 7
   - Test with n = 300 as well as two other random values of n from the attached file
